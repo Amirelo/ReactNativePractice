@@ -3,16 +3,13 @@ import { StyleSheet } from "react-native";
 const styles = new StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop:50,
         backgroundColor: 'white',
         alignItems: 'center',
       },
     rowContainer:{
-        flex: 1,
-        paddingTop:50,
         backgroundColor: 'white',
         flexDirection:'row',
-        flexWrap:"wrap"
+        flexWrap:"wrap",
     },
     headerText:{
         fontSize:30,
@@ -51,6 +48,10 @@ const styles = new StyleSheet.create({
         height: 200,
         marginTop:20
     },
+    imageBanner:{
+        width: "100%",
+        height: 200
+    },
     buttonRight:{
         alignSelf:'flex-end',
         paddingEnd: 40,
@@ -68,7 +69,6 @@ const styles = new StyleSheet.create({
     itemImage:{
         width: 100,
         height:100,
-        marginTop: 20,
         borderWidth:2,
         borderRadius: 100/2
     },

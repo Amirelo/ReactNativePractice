@@ -1,11 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import {useState } from 'react';
 import {
-  Text, TextInput, View, Image, Button, SafeAreaView,
-  ScrollView, FlatList, SectionList, Pressable, TouchableOpacity,
-  ToastAndroid, ImageBackground} from 'react-native';
-import myStyles from '../public/stylesheets/myStyles';
-import showToast from '../utils/ShowToast';
+  Text, TextInput, Image, SafeAreaView,Pressable, TouchableOpacity,} from 'react-native';
+import myStyles from '../../public/stylesheets/myStyles';
+import showToast from '../../utils/ShowToast';
 
 
 const LoginScreen = ({ navigation }) => {
@@ -16,7 +13,7 @@ const LoginScreen = ({ navigation }) => {
     <SafeAreaView style={myStyles.container}>
       <Text style={myStyles.headerText}>My Book Store</Text>
       <Image style={myStyles.imageHeader}
-        source={require('../public/images/placeholder.png')}
+        source={require('../../public/images/placeholder.png')}
         resizeMode='contain' />
       <TextInput style={myStyles.textInputSetup}
         numberOfLines={1}
@@ -36,11 +33,14 @@ const LoginScreen = ({ navigation }) => {
           setPassword(typePassword);
         }} />
 
-      <Pressable style={myStyles.buttonRight}><Text>Forgot password</Text></Pressable>
+      <Pressable style={myStyles.buttonRight}
+      onPress={() =>{
+        navigation.navigate("Verification")
+      }}><Text>Forgot password</Text></Pressable>
 
       <TouchableOpacity style={myStyles.buttonSetup}
         onPress={() => {
-          email === "1" && password === "1" ? [showToast("Login successful"), navigation.navigate("Achievement")] : showToast("Wrong email or password")
+          email === "a" && password === "a" ? [showToast("Login successful")] : showToast("Wrong email or password")
         }}>
         <Text style={myStyles.buttonTextSetup}>Login</Text>
       </TouchableOpacity>

@@ -1,13 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import {
-    Text, TextInput, View, Image, Button, SafeAreaView,
-    ScrollView, FlatList, SectionList, Pressable, TouchableOpacity,
-    ToastAndroid, ImageBackground
-} from 'react-native';
-import myStyles from '../public/stylesheets/myStyles';
-import showToast from '../utils/ShowToast';
-
+import {Text, TextInput, Image, SafeAreaView,
+Pressable, TouchableOpacity} from 'react-native';
+import myStyles from '../../public/stylesheets/myStyles';
+import showToast from '../../utils/ShowToast';
 
 const RegisterScreen = ({ navigation }) => {
     const [buttonPressed, isButtonPressed] = useState(false);
@@ -18,7 +13,7 @@ const RegisterScreen = ({ navigation }) => {
         <SafeAreaView style={myStyles.container}>
             <Text style={myStyles.headerText}>My Book Store</Text>
             <Image style={myStyles.imageHeader}
-                source={require('../public/images/namesake.jpg')}
+                source={require('../../public/images/namesake.jpg')}
                 resizeMode='contain' />
             <TextInput style={myStyles.textInputSetup}
                 numberOfLines={1}

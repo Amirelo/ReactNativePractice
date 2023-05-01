@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View, Image, SafeAreaView} from  'react-native'
-import myStyle from '../public/stylesheets/myStyles'
-import AchievementLayout from '../itemLayout/AchievementLayout';
+import myStyle from '../../public/stylesheets/myStyles'
+import AchievementLayout from '../../itemLayout/AchievementLayout';
 
 const AchievementScreen = ({navigation}) =>{
     return (
