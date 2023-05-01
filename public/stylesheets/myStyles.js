@@ -4,9 +4,16 @@ const styles = new StyleSheet.create({
     container: {
         flex: 1,
         paddingTop:50,
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         alignItems: 'center',
       },
+    rowContainer:{
+        flex: 1,
+        paddingTop:50,
+        backgroundColor: 'white',
+        flexDirection:'row',
+        flexWrap:"wrap"
+    },
     headerText:{
         fontSize:30,
     },
@@ -51,6 +58,23 @@ const styles = new StyleSheet.create({
     },
     buttonBottom:{
         marginTop:50
+    },
+    itemContainer:{
+        width: 120,
+        marginHorizontal:5,
+        backgroundColor:'white',
+        alignItems:'center',
+    },
+    itemImage:{
+        width: 100,
+        height:100,
+        marginTop: 20,
+        borderWidth:2,
+        borderRadius: 100/2
+    },
+    itemText:{
+        width:100,
+        textAlign:"center"
     }
 })
 

@@ -16,7 +16,7 @@ const LoginScreen = ({ navigation }) => {
     <SafeAreaView style={myStyles.container}>
       <Text style={myStyles.headerText}>My Book Store</Text>
       <Image style={myStyles.imageHeader}
-        source={require('../public/images/namesake.jpg')}
+        source={require('../public/images/placeholder.png')}
         resizeMode='contain' />
       <TextInput style={myStyles.textInputSetup}
         numberOfLines={1}
@@ -40,7 +40,7 @@ const LoginScreen = ({ navigation }) => {
 
       <TouchableOpacity style={myStyles.buttonSetup}
         onPress={() => {
-          email === "myemail" && password === "123" ? showToast("Login successful") : showToast("Wrong email or password")
+          email === "1" && password === "1" ? [showToast("Login successful"), navigation.navigate("Achievement")] : showToast("Wrong email or password")
         }}>
         <Text style={myStyles.buttonTextSetup}>Login</Text>
       </TouchableOpacity>
