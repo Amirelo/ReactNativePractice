@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useContext } from 'react';
 import React from 'react';
 import {
   Text, TextInput, Image, SafeAreaView, Pressable, useWindowDimensions, StyleSheet, ScrollView
@@ -7,16 +7,23 @@ import myStyles from '../../../public/stylesheets/myStyles';
 import showToast from '../../../utils/ShowToast';
 import InputLayout from '../../components/itemLayout/InputLayout';
 import CustomButton from '../../components/itemLayout/ButtonLayout';
+import { AuthContext } from '../../../utils/Utils';
 
-const LoginScreen = ({ navigation }) => {
+
+const LoginScreen = ({navigation}) => {
   const { height } = useWindowDimensions();
   const [buttonPressed, isButtonPressed] = useState(false);
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
+  const {signIn} = useContext(AuthContext);
 
   const loginCheck = () => {
-    username === "a" && password === "a" ? [showToast("Login successful")] : showToast("Wrong email or password")
+    username === "a" && password === "a" ? 
+      [showToast("Login successful"),
+      signIn({username, password})] 
+    : 
+      showToast("Wrong email or password")
   }
 
   const loginWithGoogle = () => {
