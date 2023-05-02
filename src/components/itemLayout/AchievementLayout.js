@@ -1,7 +1,6 @@
 import React from "react";
 import {Image, Text, TouchableOpacity, View} from "react-native";
-import myStyle from "../public/stylesheets/myStyles"
-import showToast from "../utils/ShowToast";
+import myStyle from "../../../public/stylesheets/myStyles";
 
 const AchievementLayout = props =>{
     return(

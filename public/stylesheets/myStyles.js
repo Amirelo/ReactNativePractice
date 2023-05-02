@@ -26,11 +26,11 @@ const styles = new StyleSheet.create({
     },
     buttonSetup:{
         marginTop:20,
-        width:"40%",
+        width:"60%",
         height:40,
         borderWidth:1,
         backgroundColor:'lightgray',
-        borderRadius: 20
+        borderRadius: 10
     },
     buttonTextSetup:{
         textAlign:"center",
@@ -44,8 +44,9 @@ const styles = new StyleSheet.create({
         backgroundColor: "lightgray"
     },
     imageHeader:{
-        width:"100%",
-        height: 200,
+        width:"70%",
+        maxWidth:300,
+        maxHeight:200,
         marginTop:20
     },
     imageBanner:{

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, Image, SafeAreaView } from 'react-native';
-import myStyle from '../../public/stylesheets/myStyles';
-import textStyle from '../../public/stylesheets/TextStyles';
-import AchievementLayout from '../../itemLayout/AchievementLayout';
+import myStyle from '../../../public/stylesheets/myStyles';
+import textStyle from '../../../public/stylesheets/TextStyles';
+import AchievementLayout from '../../components/itemLayout/AchievementLayout';
 
 const HomeScreen = ({ navigation }) => {
     return (
